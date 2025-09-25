@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wordle Solver</title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <div class="app-container">
+            <div class="background-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+
+            <header class="header">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Wordle Solver</span>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <div class="content-card">
+                    <h1 class="title">SMART WORDLE SOLVER</h1>
+                    <p class="subtitle">
+                        Enter your guesses and get optimal suggestions
+                    </p>
+
+                    <div class="game-section">
+                        <div class="guesses-container">
+                            <h3>Your Guesses</h3>
+                            <div class="guess-rows">
+                                <div class="guess-row" data-row="0">
+                                    <div class="letter-input">
+                                        <input
+                                            type="text"
+                                            maxlength="1"
+                                            class="letter"
+                                            data-pos="0"
+                                        />
+                                        <select class="status">
+                                            <option value="unknown">?</option>
+                                            <option value="correct">●</option>
+                                            <option value="present">◐</option>
+                                            <option value="absent">○</option>
+                                        </select>
+                                    </div>
+                                    <div class="letter-input">
+                                        <input
+                                            type="text"
+                                            maxlength="1"
+                                            class="letter"
+                                            data-pos="1"
+                                        />
+                                        <select class="status">
+                                            <option value="unknown">?</option>
+                                            <option value="correct">●</option>
+                                            <option value="present">◐</option>
+                                            <option value="absent">○</option>
+                                        </select>
+                                    </div>
+                                    <div class="letter-input">
+                                        <input
+                                            type="text"
+                                            maxlength="1"
+                                            class="letter"
+                                            data-pos="2"
+                                        />
+                                        <select class="status">
+                                            <option value="unknown">?</option>
+                                            <option value="correct">●</option>
+                                            <option value="present">◐</option>
+                                            <option value="absent">○</option>
+                                        </select>
+                                    </div>
+                                    <div class="letter-input">
+                                        <input
+                                            type="text"
+                                            maxlength="1"
+                                            class="letter"
+                                            data-pos="3"
+                                        />
+                                        <select class="status">
+                                            <option value="unknown">?</option>
+                                            <option value="correct">●</option>
+                                            <option value="present">◐</option>
+                                            <option value="absent">○</option>
+                                        </select>
+                                    </div>
+                                    <div class="letter-input">
+                                        <input
+                                            type="text"
+                                            maxlength="1"
+                                            class="letter"
+                                            data-pos="4"
+                                        />
+                                        <select class="status">
+                                            <option value="unknown">?</option>
+                                            <option value="correct">●</option>
+                                            <option value="present">◐</option>
+                                            <option value="absent">○</option>
+                                        </select>
+                                    </div>
+                                    <button
+                                        class="add-guess-btn"
+                                        onclick="addGuess()"
+                                    >
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="clear-btn" onclick="clearAll()">
+                                Clear All
+                            </button>
+                        </div>
+
+                        <div class="suggestions-container">
+                            <h3>Suggested Words</h3>
+                            <div class="suggestions-list" id="suggestionsList">
+                                <div class="suggestion-item">
+                                    Start by entering your first guess
+                                </div>
+                            </div>
+                            <button class="solve-btn" onclick="solve()">
+                                Get Suggestions
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="stats-section">
+                        <div class="stat-card">
+                            <div class="stat-number" id="totalWords">12972</div>
+                            <div class="stat-label">Total Words</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="possibleWords">
+                                12972
+                            </div>
+                            <div class="stat-label">Possible Words</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="guessCount">0</div>
+                            <div class="stat-label">Guesses Made</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script src="js/words.js"></script>
+        <script src="js/solver.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
