@@ -1,13 +1,6 @@
 # Wordle Solver
 
-An Electron-based desktop application that helps solve Wordle puzzles using an intelligent algorithm.
-
-## Features
-
-- **Smart Word Suggestions**: Uses frequency analysis and letter positioning to suggest optimal guesses
-- **Interactive GUI**: Clean, user-friendly interface built with Electron
-- **Real-time Filtering**: Dynamically filters word list based on your guesses and results
-- **Pattern Recognition**: Analyzes green (correct position), yellow (wrong position), and gray (not in word) feedback
+An Electron-based desktop application that helps solve Wordle puzzles using an algorithm.
 
 ## Installation
 
@@ -75,20 +68,3 @@ The solver uses a combination of:
 - **Electron** - Cross-platform desktop app framework
 - **HTML/CSS/JavaScript** - Frontend technologies
 - **Node.js** - Runtime environment
-
-## License
-
-MIT License - see LICENSE file for details
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## Acknowledgments
-
-- Word list sourced from common English dictionaries
-- Inspired by the popular Wordle game by Josh Wardle
